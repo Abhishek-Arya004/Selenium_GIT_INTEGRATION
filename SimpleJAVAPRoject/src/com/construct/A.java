@@ -1,0 +1,17 @@
+package com.construct;
+
+public class A {
+
+	void DemoA() {
+
+		System.out.println("this is DemoA");
+
+	}
+
+	void add(int a, int b) {
+
+		System.out.println(a + b);
+
+	}
+
+}
