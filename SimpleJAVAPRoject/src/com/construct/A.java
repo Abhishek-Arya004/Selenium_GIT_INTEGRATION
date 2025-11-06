@@ -4,7 +4,7 @@ public class A {
 
 	void DemoA() {
 
-		System.out.println("this is DemoA");
+		System.out.println("this is DemoAasdas");
 
 	}
 
