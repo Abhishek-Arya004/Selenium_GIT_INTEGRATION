@@ -19,9 +19,9 @@ public class C  extends B {
 		D d = new D();
 		
 		
-		d.i =19;
+	//	d.i =19;
 		
-		d.dmethod();
+	//	d.dmethod();
 		 
 		
 		//c.add(12, 13);

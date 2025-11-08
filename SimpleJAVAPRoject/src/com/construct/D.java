@@ -8,7 +8,7 @@ private int i = 10;
 private void dmethod() {
     	
     
-	   System.out.println(i);
+	   System.out.println("this is test:" +i);
     	
     }
 
