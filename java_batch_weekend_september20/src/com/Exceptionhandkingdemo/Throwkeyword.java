@@ -6,13 +6,13 @@ public class Throwkeyword {
 	
 	
 	
-     static void ValidageforVote(int age) throws Exception {
+     static void ValidageforVote(int age) throws AgeException {
 	  
     	 if(age>18) {
 		  System.out.println("can cast a vote");
 	  } 
     	 else {
-		  throw new Exception("age is less than 18");
+		  throw new AgeException("age is less than 18");
 	  
 	  }
      }
@@ -20,8 +20,17 @@ public class Throwkeyword {
 //throws keyword is used in the method declartion to specify the execption a method may handle
 	public static void main(String[] args) throws Exception {
 		// TODO Auto-generated method stub
-		ValidageforVote(17);
+		try {
+		
+		ValidageforVote(17);}
+		catch(AgeException e) {
+			System.out.println("Exception caught: " + e.getMessage());
+        }
 
+        System.out.println("Program continues...");
+		
 	}
+
+	
 
 }

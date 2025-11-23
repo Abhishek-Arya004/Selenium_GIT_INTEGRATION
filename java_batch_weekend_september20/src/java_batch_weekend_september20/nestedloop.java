@@ -6,7 +6,7 @@ public class nestedloop {
 		// TODO Auto-generated method stub
 		  // number of columns
 
-		for (int i = 1; i<=7; i++) {
+		for (int i = 1; i<=5; i++) {
 		      
 		    for (int j = 0; j<i; j++)
 		    {
