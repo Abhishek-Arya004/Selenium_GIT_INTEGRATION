@@ -15,8 +15,8 @@ public class E extends D {
 		
 		
 		
-		obj.i = 13;
-		obj.dmethod();
+		//obj.i = 13;
+		//obj.dmethod();
 		
 	}
 
