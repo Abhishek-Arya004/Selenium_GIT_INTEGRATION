@@ -43,6 +43,13 @@ public class BaseTest {
 		driver = new EdgeDriver(options);
 		wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 	}
+	
+	
+	protected static ChromeOptions getDefaultChromeOptions() {
+	    ChromeOptions options = new ChromeOptions();
+	    options.addArguments("--no-sandbox");
+	    return options;
+	  }
 
 
 	public void tearDown() {

@@ -1,8 +1,6 @@
 package com.selenium;
 
-public class Alers {
 
-}
 //Licensed to the Software Freedom Conservancy (SFC) under one
 //or more contributor license agreements.  See the NOTICE file
 //distributed with this work for additional information
@@ -20,13 +18,9 @@ public class Alers {
 //specific language governing permissions and limitations
 //under the License.
 
-package dev.selenium.interactions;
 
-import dev.selenium.BaseTest;
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
+
+
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -36,20 +30,23 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
 
 import java.time.Duration;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class AlertsTest extends BaseTest {
+public class Alerts extends BaseTest {
 
- @BeforeEach
+ @BeforeMethod
  public void createSession() {
      driver = new ChromeDriver();
      wait = new WebDriverWait(driver, Duration.ofSeconds(10));
  }
 
- @AfterEach
+ @AfterMethod
  public void endSession() {
      driver.quit();
  }
@@ -62,7 +59,7 @@ public class AlertsTest extends BaseTest {
 
      wait.until(ExpectedConditions.alertIsPresent());
      Alert alert = driver.switchTo().alert();
-     Assertions.assertEquals("cheese", alert.getText());
+     Assert.assertEquals("cheese", alert.getText());
      alert.accept();
 
  }
@@ -76,7 +73,7 @@ public class AlertsTest extends BaseTest {
      wait.until(ExpectedConditions.alertIsPresent());
 
      Alert alert = driver.switchTo().alert();
-     Assertions.assertEquals("", alert.getText());
+     Assert.assertEquals("", alert.getText());
      alert.accept();
 
  }
@@ -90,7 +87,7 @@ public class AlertsTest extends BaseTest {
      wait.until(ExpectedConditions.alertIsPresent());
 
      Alert alert = driver.switchTo().alert();
-     Assertions.assertEquals("Enter something", alert.getText());
+     Assert.assertEquals("Enter something", alert.getText());
 
      alert.sendKeys("Selenium");
      alert.accept();
@@ -105,7 +102,7 @@ public class AlertsTest extends BaseTest {
 
      wait.until(ExpectedConditions.alertIsPresent());
      Alert alert = driver.switchTo().alert();
-     Assertions.assertEquals("Enter something", alert.getText());
+     Assert.assertEquals("Enter something", alert.getText());
      alert.accept();
  }
 
@@ -117,14 +114,14 @@ public class AlertsTest extends BaseTest {
      wait.until(ExpectedConditions.alertIsPresent());
 
      Alert alert1 = driver.switchTo().alert();
-     Assertions.assertEquals("First", alert1.getText());
+     Assert.assertEquals("First", alert1.getText());
 
      alert1.sendKeys("first");
      alert1.accept();
 
 
      Alert alert2 = driver.switchTo().alert();
-     Assertions.assertEquals("Second", alert2.getText());
+     Assert.assertEquals("Second", alert2.getText());
      alert2.sendKeys("second");
      alert2.accept();
 
@@ -138,7 +135,7 @@ public class AlertsTest extends BaseTest {
      wait.until(ExpectedConditions.alertIsPresent());
 
      Alert alert = driver.switchTo().alert();
-     Assertions.assertEquals("Slow", alert.getText());
+     Assert.assertEquals("Slow", alert.getText());
 
      alert.accept();
 
@@ -153,10 +150,10 @@ public class AlertsTest extends BaseTest {
 
      wait.until(ExpectedConditions.alertIsPresent());
      Alert alert = driver.switchTo().alert();
-     Assertions.assertEquals("Are you sure?", alert.getText());
+     Assert.assertEquals("Are you sure?", alert.getText());
 
      alert.accept();
-     Assertions.assertTrue(driver.getCurrentUrl().endsWith("simpleTest.html"));
+     Assert.assertTrue(driver.getCurrentUrl().endsWith("simpleTest.html"));
 
  }
 
@@ -173,7 +170,7 @@ public class AlertsTest extends BaseTest {
      wait.until(ExpectedConditions.alertIsPresent());
 
      Alert alert = driver.switchTo().alert();
-     Assertions.assertEquals("framed cheese", alert.getText());
+     Assert.assertEquals("framed cheese", alert.getText());
 
      alert.accept();
 
@@ -194,7 +191,7 @@ public class AlertsTest extends BaseTest {
      wait.until(ExpectedConditions.alertIsPresent());
 
      Alert alert = driver.switchTo().alert();
-     Assertions.assertEquals("framed cheese", alert.getText());
+     Assert.assertEquals("framed cheese", alert.getText());
 
      alert.accept();
 
@@ -216,7 +213,7 @@ public class AlertsTest extends BaseTest {
      wait.until(ExpectedConditions.alertIsPresent());
 
      Alert alert = driver.switchTo().alert();
-     assertEquals("Sample Alert", alert.getText());
+     Assert.assertEquals("Sample Alert", alert.getText());
      alert.accept();
 
      js.executeScript("confirm('Are you sure?');");
@@ -224,14 +221,14 @@ public class AlertsTest extends BaseTest {
      wait.until(ExpectedConditions.alertIsPresent());
 
      alert = driver.switchTo().alert();
-     assertEquals("Are you sure?", alert.getText());
+     Assert.assertEquals("Are you sure?", alert.getText());
      alert.dismiss();
 
      js.executeScript("prompt('What is your name?');");
      wait = new WebDriverWait(driver, Duration.ofSeconds(30));
      wait.until(ExpectedConditions.alertIsPresent());
      alert = driver.switchTo().alert();
-     assertEquals("What is your name?", alert.getText());
+     Assert.assertEquals("What is your name?", alert.getText());
      alert.sendKeys("Selenium");
      alert.accept();
      driver.quit();
