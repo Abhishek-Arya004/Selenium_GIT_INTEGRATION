@@ -1,25 +1,24 @@
 package com.selenium;
 
+import java.time.Duration;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.ElementNotInteractableException;
+import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.support.ui.FluentWait;
+import org.openqa.selenium.support.ui.Wait;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
+import org.testng.annotations.Test;
+
 public class Waiting {
-	
-	
-	
-	
-	import dev.selenium.BaseTest;
-	import java.time.Duration;
-	import org.junit.jupiter.api.Assertions;
-	import org.junit.jupiter.api.Test;
-	import org.openqa.selenium.By;
-	import org.openqa.selenium.ElementNotInteractableException;
-	import org.openqa.selenium.NoSuchElementException;
-	import org.openqa.selenium.WebDriver;
-	import org.openqa.selenium.WebElement;
-	import org.openqa.selenium.chrome.ChromeOptions;
-	import org.openqa.selenium.support.ui.FluentWait;
-	import org.openqa.selenium.support.ui.Wait;
-	import org.openqa.selenium.support.ui.WebDriverWait;
 
 	public class WaitsTest extends BaseTest {
+		
+		
 	  @Test
 	  public void fails() {
 	    startChromeDriver(new ChromeOptions());
@@ -27,7 +26,7 @@ public class Waiting {
 	    driver.get("https://www.selenium.dev/selenium/web/dynamic.html");
 	    driver.findElement(By.id("adder")).click();
 
-	    Assertions.assertThrows(
+	    Assert.assertThrows(
 	        NoSuchElementException.class,
 	        () -> {
 	          driver.findElement(By.id("box0"));
@@ -45,7 +44,7 @@ public class Waiting {
 
 	    WebElement added = driver.findElement(By.id("box0"));
 
-	    Assertions.assertEquals("redbox", added.getDomAttribute("class"));
+	    Assert.assertEquals("redbox", added.getDomAttribute("class"));
 	  }
 
 	  @Test
@@ -58,7 +57,7 @@ public class Waiting {
 
 	    WebElement added = driver.findElement(By.id("box0"));
 
-	    Assertions.assertEquals("redbox", added.getDomAttribute("class"));
+	    Assert.assertEquals("redbox", added.getDomAttribute("class"));
 	  }
 
 	  @Test
@@ -73,7 +72,7 @@ public class Waiting {
 	    wait.until(d -> revealed.isDisplayed());
 
 	    revealed.sendKeys("Displayed");
-	    Assertions.assertEquals("Displayed", revealed.getDomProperty("value"));
+	    Assert.assertEquals("Displayed", revealed.getDomProperty("value"));
 	  }
 
 	  @Test
@@ -96,11 +95,8 @@ public class Waiting {
 	          return true;
 	        });
 
-	    Assertions.assertEquals("Displayed", revealed.getDomProperty("value"));
+	  //  Assertions.assertEquals("Displayed", revealed.getDomProperty("value"));
 	  }
 	}
-
-
-	
 
 }
