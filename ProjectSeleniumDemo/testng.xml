@@ -1,10 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="First test Suite">
-  <test thread-count="5" name="Regression">
-    <classes>
-      <class name="ChromaCampus.ProjectSeleniumDemo.Sampledemo2"/>
-      <class name="ChromaCampus.ProjectSeleniumDemo.SampleDemo1"/>
-    </classes>
-  </test> <!-- Test -->
-</suite> <!-- Suite -->
+<suite name="Suite">
+	<test thread-count="5" name="Test">
+	
+	
+	<parameter name="V1" value="10"/>
+	<parameter name="V2" value="20"/>
+	<parameter name="fruit_value" value="Mango"/>
+
+
+
+		<groups>
+			<run>
+				<exclude name="Regression" />
+				<include name="Sanity"></include>
+				<!-- <exclude name="Sanity" /> -->
+			</run>
+		</groups>
+
+
+		<classes>
+			<!--     <class name="ChromaCampus.ProjectSeleniumDemo.Sampledemo3"/>
+      <class name="ChromaCampus.ProjectSeleniumDemo.Sampledemo2"/> 
+			<class name="ChromaCampus.ProjectSeleniumDemo.Sampledemo4" />-->
+			<class name="ChromaCampus.ProjectSeleniumDemo.Parameterization" />
+			
+			<!--   <class
+				name="ChromaCampus.ProjectSeleniumDemo.SampleDemo1"/>
+      <class name=".Sampledemo3"/>  -->
+
+
+		</classes>
+	</test> <!--
+	Test -->
+</suite> <!--
+Suite -->

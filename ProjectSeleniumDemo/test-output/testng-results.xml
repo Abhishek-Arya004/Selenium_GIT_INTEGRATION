@@ -1,67 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-01-18T14:59:45 IST" name="First test Suite" finished-at="2026-01-18T14:59:45 IST" duration-ms="72">
+  <suite started-at="2026-02-01T14:09:11 IST" name="Default suite" finished-at="2026-02-01T14:09:52 IST" duration-ms="40158">
     <groups>
     </groups>
-    <test started-at="2026-01-18T14:59:45 IST" name="Regression" finished-at="2026-01-18T14:59:45 IST" duration-ms="72">
-      <class name="ChromaCampus.ProjectSeleniumDemo.Sampledemo2">
-        <test-method signature="demo3()[pri:0, instance:ChromaCampus.ProjectSeleniumDemo.Sampledemo2@14cd1699]" started-at="2026-01-18T14:59:45 IST" name="demo3" finished-at="2026-01-18T14:59:45 IST" duration-ms="15" status="PASS">
+    <test started-at="2026-02-01T14:09:11 IST" name="Default test" finished-at="2026-02-01T14:09:52 IST" duration-ms="40158">
+      <class name="FreameworkDevlopment.OrangedemoLogin">
+        <test-method is-config="true" signature="setup()[pri:0, instance:FreameworkDevlopment.OrangedemoLogin@76505305]" started-at="2026-02-01T14:09:04 IST" name="setup" finished-at="2026-02-01T14:09:11 IST" duration-ms="7536" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- demo3 -->
-        <test-method is-config="true" signature="Aftersuite()[pri:0, instance:ChromaCampus.ProjectSeleniumDemo.Sampledemo2@14cd1699]" started-at="2026-01-18T14:59:45 IST" name="Aftersuite" finished-at="2026-01-18T14:59:45 IST" duration-ms="3" status="PASS">
+        </test-method> <!-- setup -->
+        <test-method signature="loginValidation()[pri:1, instance:FreameworkDevlopment.OrangedemoLogin@76505305]" started-at="2026-02-01T14:09:11 IST" name="loginValidation" finished-at="2026-02-01T14:09:40 IST" duration-ms="28875" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Aftersuite -->
-      </class> <!-- ChromaCampus.ProjectSeleniumDemo.Sampledemo2 -->
-      <class name="ChromaCampus.ProjectSeleniumDemo.SampleDemo1">
-        <test-method is-config="true" signature="beforesuite()[pri:0, instance:ChromaCampus.ProjectSeleniumDemo.SampleDemo1@34123d65]" started-at="2026-01-18T14:59:45 IST" name="beforesuite" finished-at="2026-01-18T14:59:45 IST" duration-ms="16" status="PASS">
+        </test-method> <!-- loginValidation -->
+        <test-method signature="dashboardValidation()[pri:2, instance:FreameworkDevlopment.OrangedemoLogin@76505305]" started-at="2026-02-01T14:09:40 IST" name="dashboardValidation" finished-at="2026-02-01T14:09:52 IST" duration-ms="11234" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- beforesuite -->
-        <test-method is-config="true" signature="Beforetest()[pri:0, instance:ChromaCampus.ProjectSeleniumDemo.SampleDemo1@34123d65]" started-at="2026-01-18T14:59:45 IST" name="Beforetest" finished-at="2026-01-18T14:59:45 IST" duration-ms="1" status="PASS">
+        </test-method> <!-- dashboardValidation -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:FreameworkDevlopment.OrangedemoLogin@76505305]" started-at="2026-02-01T14:09:52 IST" name="teardown" finished-at="2026-02-01T14:09:52 IST" duration-ms="285" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Beforetest -->
-        <test-method is-config="true" signature="Beforeclass()[pri:0, instance:ChromaCampus.ProjectSeleniumDemo.SampleDemo1@34123d65]" started-at="2026-01-18T14:59:45 IST" name="Beforeclass" finished-at="2026-01-18T14:59:45 IST" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Beforeclass -->
-        <test-method is-config="true" signature="Beforemethod()[pri:0, instance:ChromaCampus.ProjectSeleniumDemo.SampleDemo1@34123d65]" started-at="2026-01-18T14:59:45 IST" name="Beforemethod" finished-at="2026-01-18T14:59:45 IST" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Beforemethod -->
-        <test-method signature="demo1()[pri:0, instance:ChromaCampus.ProjectSeleniumDemo.SampleDemo1@34123d65]" started-at="2026-01-18T14:59:45 IST" name="demo1" finished-at="2026-01-18T14:59:45 IST" duration-ms="2" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- demo1 -->
-        <test-method is-config="true" signature="Aftermethod()[pri:0, instance:ChromaCampus.ProjectSeleniumDemo.SampleDemo1@34123d65]" started-at="2026-01-18T14:59:45 IST" name="Aftermethod" finished-at="2026-01-18T14:59:45 IST" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Aftermethod -->
-        <test-method is-config="true" signature="Beforemethod()[pri:0, instance:ChromaCampus.ProjectSeleniumDemo.SampleDemo1@34123d65]" started-at="2026-01-18T14:59:45 IST" name="Beforemethod" finished-at="2026-01-18T14:59:45 IST" duration-ms="2" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Beforemethod -->
-        <test-method signature="demo2()[pri:0, instance:ChromaCampus.ProjectSeleniumDemo.SampleDemo1@34123d65]" started-at="2026-01-18T14:59:45 IST" name="demo2" finished-at="2026-01-18T14:59:45 IST" duration-ms="2" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- demo2 -->
-        <test-method is-config="true" signature="Aftermethod()[pri:0, instance:ChromaCampus.ProjectSeleniumDemo.SampleDemo1@34123d65]" started-at="2026-01-18T14:59:45 IST" name="Aftermethod" finished-at="2026-01-18T14:59:45 IST" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Aftermethod -->
-        <test-method is-config="true" signature="Afterclass()[pri:0, instance:ChromaCampus.ProjectSeleniumDemo.SampleDemo1@34123d65]" started-at="2026-01-18T14:59:45 IST" name="Afterclass" finished-at="2026-01-18T14:59:45 IST" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Afterclass -->
-        <test-method is-config="true" signature="Aftertest()[pri:0, instance:ChromaCampus.ProjectSeleniumDemo.SampleDemo1@34123d65]" started-at="2026-01-18T14:59:45 IST" name="Aftertest" finished-at="2026-01-18T14:59:45 IST" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Aftertest -->
-      </class> <!-- ChromaCampus.ProjectSeleniumDemo.SampleDemo1 -->
-    </test> <!-- Regression -->
-  </suite> <!-- First test Suite -->
+        </test-method> <!-- teardown -->
+      </class> <!-- FreameworkDevlopment.OrangedemoLogin -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>
